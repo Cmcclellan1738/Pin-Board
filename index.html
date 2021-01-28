@@ -12,7 +12,12 @@
 	<h1 class="header">My Pinboard</h1>
 	<div class="searchContainer">
 		<label class="searchLabel">search</label>
-		<input class="searchInput" />
+		<input 
+      type="text"
+      id="searchInput"
+      class="searchInput"
+      oninput="filtertags()" 
+    />
     <p class="searchResult"></p>
 		<button class="newCardButton">Add a card</button>
   </div>
