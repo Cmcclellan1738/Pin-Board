@@ -22,7 +22,9 @@ function appendData(data) {
     var tagContainer = document.createElement("div"); tagContainer.className = "tagContainer"; card.appendChild(tagContainer);
 
     const tagButtons = data[i].tags.map((tag) => {
-      const tagButton = document.createElement("button");
-    })
+      const tagButton = document.createElement("button"); tagButton.innerHTML = tag; return tagButton; 
+    });
+    for(const tagButton of tagButtons) {tagButton.className = "tagButton"; tagContainer.appendChild(tagButton);
+    }
   }
 }
