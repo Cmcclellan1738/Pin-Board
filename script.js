@@ -57,3 +57,20 @@ function filterTags() {
   });
   appendData(filteredCards);
 }
+var newCardButton = document.getElementById("newCardButton");
+
+var newCardModal = document.getElementById("newCardModal");
+newCardButton.onclick = function () {
+  newCardModal.style.display = "block";
+};
+
+var closeModal = document.getElementsByClassName("close")[0];
+closeModal.onclick = function () {
+  newCardModal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == newCardModal) {
+    newCardModal.style.display = "none";
+  }
+};
